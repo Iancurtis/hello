@@ -1,0 +1,11 @@
+## ignore all the files with no extension name 
+
+#first step: ignore all files
+*
+#second step: except file folders
+!/*/*
+#third step: except files with extension name
+!*.*
+##
+.vscode/
+.DS_Store
