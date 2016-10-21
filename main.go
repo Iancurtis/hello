@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"github.com/astaxie/beego"
-	"github.com/beego/beeweb/routers"
 )
 
 func main() {
@@ -27,9 +26,9 @@ func setStatic() {
 }
 
 func setLog() {
-	routers.IsPro = beego.BConfig.RunMode == "prod"
+	isPro := beego.BConfig.RunMode == "prod"
 
-	if routers.IsPro {
+	if isPro {
 		beego.SetLevel(beego.LevelInformational)
 		os.Mkdir("./log", os.ModePerm)
 		beego.BeeLogger.SetLogger("file", `{"filename": "log/log.txt"}`)
