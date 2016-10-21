@@ -8,9 +8,13 @@
 !*.*
 
 ## file type need to ignore
+*.exe
+*.*~
 *.mp3
 
 
 ## folders need to be ignore
 .vscode/
 .DS_Store
+bower_components/
+

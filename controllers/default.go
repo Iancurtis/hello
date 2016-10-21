@@ -15,5 +15,6 @@ func (c *MainController) Get() {
 	c.Data["Fyn"] = map[string]string{
 		"Email": "fyn@bohaisoft.cn",
 	}
-	c.TplName = "index.tpl"
+	c.TplName = "index.html"
+	///c.Render()
 }

@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/astaxie/beego"
 )
 
@@ -39,4 +41,7 @@ func (c *LoginController) Post() {
 	c.Ctx.Input.Bind(&password, "password")
 	beego.Debug("something: ", name, password)
 	//c.TplName = "LoginController/get.tpl"
+	c.Data["json"] = "hello"
+	//c.ServeJSON()
+	c.Redirect("/", http.StatusTemporaryRedirect)
 }

@@ -11,14 +11,19 @@ import (
 
 func main() {
 
-	beego.BConfig.WebConfig.AutoRender = false
+	//beego.BConfig.WebConfig.AutoRender = false
 
 	setLog()
-	//set static file access
-	beego.SetStaticPath("/download", "download")
 
+	setStatic()
 	//
 	beego.Run()
+}
+
+func setStatic() {
+	beego.SetStaticPath("/download", "download")
+	beego.SetStaticPath("/bower_components", "bower_components")
+	beego.SetStaticPath("/public", "public")
 }
 
 func setLog() {

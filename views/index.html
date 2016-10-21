@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>A sample website</title>
+    <meta name="description" content="a sample website just for beego.">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bower_components/pure/pure-min.css">
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/bower_components/pure/grids-responsive-old-ie-min.css">
+    <link rel="stylesheet" href="/public/css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/bower_components/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="/public/css/layouts/marketing.css">
+    <!--<![endif]-->
+    <!--    <link rel="stylesheet" href="/public/css/common/normalize.css"> -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <button class="pure-button pure-button-primary" onclick="printdoc();"><i class="fa fa-printer"></i>Printer</button>
+    <button class="pure-button pure-button-primary" onclick="window.open('/public/html/app.html')"><i class="fa fa-react"></i>React</button>
+    <script>
+        function printdoc() {
+            window.open("/public/html/print_test.html");
+            //alert("hello");
+            //就这一句核心JavaScript代码就实现打印了！
+        }
+    </script>
+</body>
+
+</html>
